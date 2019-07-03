@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<h1>Blog home! </h1>
-</body>
-</html>
+{%extends "blog/base.html"%}
+{%block content%}
+	{% for post in posts %}
+	<h1>{{post.title}}</h1>
+	<p>BY {{post.author}} on {{post.date_posted}}</p>
+	<p>{{post.content}} </p>
+	{%endfor%}
+{%endblock content%}
